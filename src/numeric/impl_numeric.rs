@@ -112,6 +112,14 @@ where
         sum
     }
 
+    // implement round
+    pub fn round(&self) -> Array<A, D>
+    where
+        A: Float,
+    {
+        self.mapv(|x| x.round())
+    }
+
     /// Return variance of elements in the array.
     ///
     /// The variance is computed using the [Welford one-pass
